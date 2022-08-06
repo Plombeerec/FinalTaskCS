@@ -4,7 +4,7 @@
 выполнения алгоритма.
 */
 
-string[] Massive = {"qwezes", "werzy", "ertre", "rtyuuu", "tyu", "yu", "%)"};
+string[] Massive = {"qwezes", "werzy", "er", "rtyuuu", "tyu", "yu", "%)"};
 
 string[] CheckElement(string[] massive)
 {
@@ -14,18 +14,19 @@ string[] CheckElement(string[] massive)
     {
         if(massive[i].Length <=3)
         {
-            
             result[i] = massive[i];
             
         }
     }
-
     return result;
 }
 
 void ShowResult(string[] res)
 {
     for(int i = 0; i < res.Length; i++)
-        Console.Write($" {res[i]}  {" "}");
+    {
+        if(i > 0)
+        Console.Write($"{res[i]} ");
+    }
 }
 ShowResult(CheckElement(Massive));
