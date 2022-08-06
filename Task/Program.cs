@@ -23,6 +23,8 @@ string[] CheckElement(string[] massive)
 
 void ShowResult(string[] res)
 {
+    string[] del={" "};
+    res = res.Except(del).ToArray();
     for(int i = 0; i < res.Length; i++)
     {
         if(i > 0)
